@@ -28,26 +28,25 @@ twitch = "/twitch.cshtml";
 		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 		<meta name="msapplication-TileColor" content="#b91d47">
 		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/custom.css">
 	</head>
 	<body>
 		<div class="container clear-top">
-			<div class="hero-custom">
+			<div class="jumbotron">
 				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
+					<div class="col-md-12">
 						@{
 						if(IsPost){
 						String code = Request["country"].Split(':')[1];
 						<h1>Welcome @Util.getCountry(code)</h1>
 						}else{
-						<h1>Welcome United Kingdom</h1>
+						<h1>Welcome</h1>
 						}
-						}
+                        }
 					</div>
-					<div class="col-md-3"></div>
+					
 				</div>
 			</div>
 			<div class="row">
@@ -134,7 +133,7 @@ twitch = "/twitch.cshtml";
 					<li><a href="/commands.cshtml">Commands</a><span class="divider">/</span></li>
 					<li><a href=@twitch>Twitch</a><span class="divider">/</span></li>
 				</ul>
-				<form method="post" action="" id="countrylist">
+				<!--<form method="post" action="" id="countrylist">
 					<select name="country">
 						<option value="ISO 3166-2:AF">Afghanistan</option>
 						<option value="ISO 3166-2:AX">Åland Islands</option>
@@ -245,7 +244,7 @@ twitch = "/twitch.cshtml";
 						<option value="ISO 3166-2:IR">Iran, Islamic Republic of</option>
 						<option value="ISO 3166-2:IQ">Iraq</option>
 						<option value="ISO 3166-2:IE">Ireland</option>
-						<!-- Awwww yiss-->
+						
 						<option value="ISO 3166-2:IM">Isle of Man</option>
 						<option value="ISO 3166-2:IL">Israel</option>
 						<option value="ISO 3166-2:IT">Italy</option>
@@ -398,7 +397,7 @@ twitch = "/twitch.cshtml";
 						<option value="ISO 3166-2:ZW">Zimbabwe</option>
 					</select>
 					<input class="btn btn-oldstyle-a90329" type="submit" value="Submit" /> 
-				</form>
+				</form> -->
 			</div>
 		</div>
 	</body>
