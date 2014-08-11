@@ -12,14 +12,37 @@ result = "The file is empty.";
 else {
 // File does not exist.
 result = "The file does not exist.";
-} 
+}
+
+ var browser = Request.Browser;
+                String twitch = "";
+                if(browser.IsMobileDevice){
+                    twitch = "http://twitch.tv/the_lone_devil";
+                }
+                else{
+                    twitch = "/twitch.cshtml";
+                    } 
 }
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<title>TLD Commands</title>
-		<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/custom.css">
 		<style>
@@ -41,13 +64,13 @@ result = "The file does not exist.";
 			{
 			<div class="hero-custom">
 				<div class="row">
-                    <div class="span1"></div>
-					<div class="span8">
+                    <div class="col-md-2"></div>
+					<div class="col-md-8">
 						@{channel = true;       
                       }
 						<h1>The Lone Devil's, Twitch Chat Commands</h1>
 					</div>
-                    <div class="span2"></div>
+                    <div class="col-md-2"></div>
 				</div>
 			</div>
 			}
@@ -60,7 +83,7 @@ result = "The file does not exist.";
 				{
 				<h1>Mod Commands</h1>
 				mod = true;
-				<ul class="mod unstyled">
+				<ul class="mod list-unstyled">
 					@foreach(String line1 in userData)
 					{
 					if(!(@line1.ToLower().Contains("the_lone_devil:")) && !(@line1.ToLower().Contains("mod:")) )
@@ -85,7 +108,7 @@ result = "The file does not exist.";
 				if(@mod == true && @line.ToLower().Contains("user:"))
 				{
 				<h1>User Commands</h1>
-				<ul class="mod unstyled">
+				<ul class="mod list-unstyled">
 					@foreach(String line1 in userData){
 					if(!(@line1.ToLower().Contains("the_lone_devil:")) || !(@line1.ToLower().Contains("mod:")) )
 					{
@@ -113,10 +136,11 @@ result = "The file does not exist.";
 			}
             <div class="navbar navbar-inverse navbar-fixed-bottom">
 			<div class="navbar-inner">
-				<a class="brand" href="/">TLDCode.uk</a>
+				<a class="navbar-brand" href="/">TLDCode.uk</a>
 				<ul class="breadcrumb-clear">
                     <li><a href="/">Home</a> <span class="divider">/</span></li>
 					<li class="active">Commands<span class="divider">/</span></li>
+                    <li><a href=@twitch>Twitch</a> <span class="divider">/</span></li>
 				</ul>
 				<form id="countrylist">
 					<select>

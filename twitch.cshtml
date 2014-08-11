@@ -1,138 +1,91 @@
 ﻿@{
-var browser = Request.Browser;
-String twitch = "";
-if(browser.IsMobileDevice){
-twitch = "http://twitch.tv/the_lone_devil";
+    
 }
-else{
-twitch = "/twitch.cshtml";
-}
-}
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<title>Home</title>
-		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-		<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
-		<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
-		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-		<meta name="msapplication-TileColor" content="#b91d47">
-		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/custom.css">
-	</head>
-	<body>
-		<div class="container clear-top">
-			<div class="hero-custom">
-				<div class="row">
-					<div class="col-md-3"></div>
-					<div class="col-md-6">
-						@{
-						if(IsPost){
-						String code = Request["country"].Split(':')[1];
-						<h1>Welcome @Util.getCountry(code)</h1>
-						}else{
-						<h1>Welcome United Kingdom</h1>
-						}
-						}
-					</div>
-					<div class="col-md-3"></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4 ">
-                    <div class="col-md-12 content">
-					<h2>Twitch Commands</h2>
-					<!--<p>Ut suscipit orci urna, et malesuada lacus pharetra nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque vitae bibendum tellus. Quisque ultrices vulputate purus, vitae volutpat tortor congue a. Fusce ut ipsum lobortis, aliquam dui at, tempus metus. Cras laoreet rutrum mauris vitae rutrum. Aenean in ipsum at arcu molestie imperdiet a vitae turpis. Sed feugiat vitae risus et volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed pharetra sapien vel libero sodales fermentum. Nullam at arcu felis. Pellentesque ultricies vehicula leo. Aenean aliquam, enim ut iaculis commodo, nulla elit vehicula arcu, ut bibendum mi sapien ac nisi. Vivamus scelerisque tellus quis erat bibendum, ac eleifend urna convallis. Pellentesque aliquam, tortor nec dapibus bibendum, nunc libero auctor nibh, in rutrum orci ante vel urna. Fusce iaculis justo sed lorem adipiscing, nec commodo sem accumsan. </p> -->
-					<a class="btn btn-oldstyle-a90329" href="commands.cshtml">Twitch Commands</a>
-                        </div>
-				</div>
-				<div class="col-md-4">
-                    <div class="col-md-12 content">
-					<h2>Twitch Channel</h2>
-					<!-- <p>Ut suscipit orci urna, et malesuada lacus pharetra nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque vitae bibendum tellus. Quisque ultrices vulputate purus, vitae volutpat tortor congue a. Fusce ut ipsum lobortis, aliquam dui at, tempus metus. Cras laoreet rutrum mauris vitae rutrum. Aenean in ipsum at arcu molestie imperdiet a vitae turpis. Sed feugiat vitae risus et volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed pharetra sapien vel libero sodales fermentum. Nullam at arcu felis. Pellentesque ultricies vehicula leo. Aenean aliquam, enim ut iaculis commodo, nulla elit vehicula arcu, ut bibendum mi sapien ac nisi. Vivamus scelerisque tellus quis erat bibendum, ac eleifend urna convallis. Pellentesque aliquam, tortor nec dapibus bibendum, nunc libero auctor nibh, in rutrum orci ante vel urna. Fusce iaculis justo sed lorem adipiscing, nec commodo sem accumsan. </p> -->
-					<a class="btn btn-oldstyle-a90329" href=@twitch>Twitch Channel</a>
-				</div>
-                    </div>
-                <div class="col-md-4 ">
-                    <div class="col-md-12 content">
-					<h2>Github</h2>
-					<!-- <p>Ut suscipit orci urna, et malesuada lacus pharetra nec. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque vitae bibendum tellus. Quisque ultrices vulputate purus, vitae volutpat tortor congue a. Fusce ut ipsum lobortis, aliquam dui at, tempus metus. Cras laoreet rutrum mauris vitae rutrum. Aenean in ipsum at arcu molestie imperdiet a vitae turpis. Sed feugiat vitae risus et volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed pharetra sapien vel libero sodales fermentum. Nullam at arcu felis. Pellentesque ultricies vehicula leo. Aenean aliquam, enim ut iaculis commodo, nulla elit vehicula arcu, ut bibendum mi sapien ac nisi. Vivamus scelerisque tellus quis erat bibendum, ac eleifend urna convallis. Pellentesque aliquam, tortor nec dapibus bibendum, nunc libero auctor nibh, in rutrum orci ante vel urna. Fusce iaculis justo sed lorem adipiscing, nec commodo sem accumsan. </p> -->
-					<a class="btn btn-oldstyle-a90329" href="https://github.com/Thelonedevil?tab=repositories">Github</a>
-				</div>
-                    </div>
 
-			</div>
-			<div class="row">
-								<div class="col-md-12">
-                                    <div class="col-md-12 content">
-                                        <div class="row">
-                                            <div class="col-md-4"><img class="img-responsive img-rounded" alt="Responsive image" src="http://i.imgur.com/VsbMV9J.png"/></div>
-                                            <div class="col-md-4">
-					<h2>RPGOverhaul</h2>
-					<h3>Summary</h3>
-					<p>Overhaul of minecraft into a post apocalyptic setting where surface water is scarce.</p>
-                                                </div>
-                                            <div class="col-md-4"><img class="img-responsive img-rounded" alt="Responsive image" src="http://i.imgur.com/QlaG7DF.png"/></div>
-                                            </div>
-					<h3>Description</h3>
-					<h4>Overview</h4>
-					<p>RPG Overhaul is an OVERHAUL mod, as such, it will most likely be completely incompatible with mods such as Biomes O' Plenty, Mystcraft and most technology based mods (Thermal expansion, MFR, IC2, Buildcraft etc.). Some of these mods WILL run alongside RPG Overhaul, however I do not recommend it as the game play of other mods will often conflict with the idea that RPG Overhaul is built upon. If you encounter a bug, and you are running non-supported mods, first backup your worlds, then remove the un-supported mods and test in a new world to see if the bug still exists, if it still exists, then please report it with crash logs (if applicable )and a description of the bug. There is a list of supported mods down below.</p>
-                                    <div class="row">
-                                        <div class="col-md-4">
-					<h4>Implemented Features</h4>
-					<ul>
-						<li>Loot Chests</li>
-						<li>Fennec Foxs</li>
-						<li>Goats </li>
-						<li>Gazelle</li>
-					</ul>
-                                        </div>
-                                        <div class="col-md-4">
-					<h4>WIP/TBA Features</h4>
-					<ul>
-						<li>Quests</li>
-						<li>Weapons</li>
-						<li>Armour</li>
-					</ul>
-                                            </div>
-                                            <div class="col-md-4">
-					<h4>Supported Mods</h4>
-                    <ul>
-					    <li>NEI</li>
-					    <li>CodeChickenCore</li>
-					    <li>Waila</li>
-					    <li>Hats</li>
-					    <li>Shatter</li>
-                        <li>Pam's HarvestCraft</li>
-                        <li>Chisel</li>
-                    </ul>
-                                            </div>
-                                        
-                                        </div>
-					<a class="btn btn-oldstyle-a90329" href="http://TLDCode.uk:8080">RPGOverhaul Dev Builds</a>
-                                        </div>
-				</div>				
-			</div>
-		</div>
-		<div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>The Lone Devil's Twitch</title>
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196">
+<link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<meta name="msapplication-TileColor" content="#b91d47">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/custom.css">
+        
+    </head>
+    <body>
+        <div class="container clear-top">
+        <div class="row content">
+            <div class="col-md-8">
+        <iframe class="videoplayer" src="http://www.twitch.tv/embed?channel=the_lone_devil" height="500" width="800"seamless="seamless"frameborder="0"></iframe>
+        </div>
+            <div class="col-md-4">
+                <iframe src="http://www.twitch.tv/the_lone_devil/chat?popout=/" height="500" width="320"seamless="seamless"frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="col-md-12 content">
+            <h1>Rules</h1>
+                <ul>
+                    
+<li>No discriminatory remarks (Insta-ban)</li> 
+<li>No Insults of any kind</li>
+<li>No Links</li> 
+<li>No Spam</li>
+                    <li>Cursing can be used to punctuate your statement, but not to hurl abuse at other people</li>
+                </ul>
+            </div>
+                </div>
+            <div class="col-md-3">
+                <div class="col-md-12 content">
+                <h1>Raptr</h1>
+            <iframe src="http://raptr.com/the_lone_devil/gamercard" style="height:151px; width: 250px;" scrolling="no" frameborder="0"></iframe>
+            </div>
+                </div>
+            <div class="col-md-3 ">
+                <div class="col-md-12 content">
+                <h1>Mod List</h1>
+                <ul>
+                    <li>Findranna</li>
+                    <li>TheSpriteful</li>
+                    <li>NthPortal</li>
+                    <li>Lone_Bot</li>
+                    <li>Mt_Job_Full_Life</li>
+                </ul>
+            </div>
+                
+                </div>
+            <div class="col-md-3">
+                <div class="col-md-12 content">
+                <h1>Streaming Schedule</h1>
+                <p>I normally stream Wednesdays, at 9pm GMT, 4pm EST, 3pm CST, 2pm MST, 1pm PST</p>
+            </div>
+                </div>
+        </div>
+            </div>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
 			<div class="navbar-inner">
 				<a class="navbar-brand" href="/">TLDCode.uk</a>
 				<ul class="breadcrumb-clear">
-					<li class="active">Home<span class="divider">/</span></li>
-					<li><a href="/commands.cshtml">Commands</a><span class="divider">/</span></li>
-					<li><a href=@twitch>Twitch</a><span class="divider">/</span></li>
+					<li><a href="/">Home</a><span class="divider">/</span></li>
+					<li><a href="/commands.cshtml">Commands</a> <span class="divider">/</span></li>
+                    <li class="active">Twitch<span class="divider">/</span></li>
 				</ul>
 				<form method="post" action="" id="countrylist">
 					<select name="country">
@@ -400,6 +353,6 @@ twitch = "/twitch.cshtml";
 					<input class="btn btn-oldstyle-a90329" type="submit" value="Submit" /> 
 				</form>
 			</div>
-		</div>
-	</body>
+            </div>  
+    </body>
 </html>

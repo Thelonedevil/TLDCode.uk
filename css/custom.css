@@ -173,7 +173,7 @@ html,body {
     text-decoration: none;
 }
 .content{
-    padding: 0px;
+    padding: 5px;
 	margin-bottom: 30px;
 	font-size: 12px;
 	font-weight: 200;
@@ -210,4 +210,5 @@ html,body {
 	padding-top: 7px;
 	padding-right: 5px;
 	float: right;
+
 }
