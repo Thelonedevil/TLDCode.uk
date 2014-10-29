@@ -20,5 +20,20 @@
         dev: "My Master is developing a mod for minecraft. ETA requests will be ignored/timedout. He uses Intellij IDEA to code. He IS NOT a tutorial provider."
         ff14: "My Master is playing Final Fanatsy XIV : A Realm Reborn, He is on the Zodiark world on the Chaos Data-Center. His character is a female Miqo'te from the Keepers of the Moon clan. She is called Seda Moui. The character page is at http://na.finalfantasyxiv.com/lodestone/character/8255563/ if you want to see the stats."
         osu: "My Master is playing Osu! his profile is available here: http://osu.ppy.sh/u/4452287 and Osu! is vailable here: http://osu.ppy.sh/ "
+        music: "The music is avilable here: http://jpv.everythingisawesome.us/"
     user:
         specs: "Processor: AMD FX 8350 @ 4.0GHz [Octa-Core]    RAM: 16GB @1333MHz [4 X 4GB]    MotherBoard: Gigabyte UD5 [GA-990FXA]    Graphics Card: EVGA GeForce GTX 660 3GB GDDR5    HDD: WD Desktop Mainstream 2TB SATA III"
+thespriteful:
+    mod:
+        kaptrick: "Kaptrick was a nickname bestowed upon TheSpriteful from Sir William Barlow, as he used Kappa one too many times. It happened in a stream where WillBarlow had a lot of trolls, and I Re-Trolled them, and eventually banned then, hence his new nickname"
+        bot: "I was Programmed by The_Lone_Devil to moderate streams, my banhammer may swing alot Kappa"
+        links: "If you guys like what you see, please feel free to hit that follow button! You can also follow me on these sites too; Twitter: http://bit.ly/TwitterTS ; Tumblr: http://bit.ly/TumblrTS ; Instagram: http://bit.ly/TSIntsa"
+        donate: "Like what you're watching? Want to help provide more content? If you do, you can donate here: http://bit.ly/TsDonate ; If you do happen to donate, please notify me <3"
+        
+        #test: "test"
+    user:
+        trolls: "Guys, please don't feed the trolls, it only encourages them to troll even more, then causing the chat to spiral out of control, we don't that want that to happen, Thanks <3"
+        dammit: "God dammit Bryan (GeneralMadHater)"
+        hug: "%user% hugs %touser%"
+        bday: "HAPPY BIRTHDAY %touser%! Hope you have an AWESOMELY GOOD day! <3"
+        test: "this is a test"
